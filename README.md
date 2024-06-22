@@ -11,6 +11,14 @@ To begin with this project, follow the instructions below.
 Make sure you have the following prerequisites installed:
 
 - [Terraform](https://www.terraform.io/downloads.html): Refer to the Installation Guide.
+
+I am using the version 1.8.5 of terraform, you can verify the version with the next coman:
+```
+$ terraform --version
+Terraform v1.8.5
+on linux_amd64
+```
+
 - AWS Console on your local environment.
 - Run `aws configure` in your terminal and provide the access key and secret access key obtained when creating a user in AWS IAM service.
 
