@@ -22,6 +22,10 @@ on linux_amd64
 - AWS Console on your local environment.
 - Run `aws configure` in your terminal and provide the access key and secret access key obtained when creating a user in AWS IAM service.
 
+### Summary of the code in main.tf
+
+In our configuration file main.tf, we outline the setup for a Virtual Private Cloud (VPC) with segmented public and private subnets. The VPC is connected to an internet gateway to facilitate external communication. We establish a route table that directs traffic both to the public subnet and through the internet gateway. Additionally, a security group is defined to manage HTTP and HTTPS traffic within the VPC. Our setup includes provisioning an EC2 instance named ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*, configured with a network interface to assign a static IP address. This infrastructure configuration ensures secure and controlled network access while providing necessary connectivity for our applications and services.
+
 ### Initialization
 
 Initialize the Terraform project by running the following command:
