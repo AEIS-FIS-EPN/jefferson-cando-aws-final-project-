@@ -132,7 +132,7 @@ resource "aws_instance" "ubuntu_instance_jeffSA" {
 resource "aws_eip" "jeffSA_elastic_ip" {  #Recurso aws_eip es la elastic ip 
   associate_with_private_ip = tolist(aws_network_interface.jeffSA_network_interface.private_ips)[0]
   network_interface = aws_network_interface.jeffSA_network_interface.id
-  #instance = aws_instance.ubuntu_instance_jeffSA.id
+  instance = aws_instance.ubuntu_instance_jeffSA.id
   tags = {
     Name="jeffSA elastic ip"
   }
