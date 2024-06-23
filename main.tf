@@ -123,6 +123,12 @@ resource "aws_instance" "ubuntu_instance_jeffSA" {
     network_interface_id = aws_network_interface.jeffSA_network_interface.id
     device_index = 0
   }
+  user_data = <<-EOF
+              #!bin/bash
+              sudo apt update -y
+              sudo apt install nginx -y
+              sudo systemctl start nginx
+              EOF
   tags = {
     Name="ubuntu jeff instance"
   }
